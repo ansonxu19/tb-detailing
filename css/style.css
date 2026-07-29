@@ -50,13 +50,12 @@ h1, h2, h3 {
 }
 .kicker::before { content: ""; width: 2.4rem; height: 2px; background: var(--cyan-grad); clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%); }
 
-/* hex background texture */
-.hex-bg { position: relative; }
-.hex-bg::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 34L0 50L0 84L28 100L56 84L56 50z' fill='none' stroke='%2300cfff' stroke-width='1'/%3E%3Cpath d='M28 0L0 16L0 50L28 66L56 50L56 16z' fill='none' stroke='%2300cfff' stroke-width='1'/%3E%3C/svg%3E");
-  background-size: 56px 100px;
+/* cube pattern texture — applied to every section below the hero */
+.section, .reviews-band, .trust-bar {
+  background-image: url("../images/pattern.png");
+  background-size: 490px auto;
 }
+.hex-bg { position: relative; }
 .hex-bg > * { position: relative; }
 
 /* ============ HEADER ============ */
@@ -190,7 +189,8 @@ h1, h2, h3 {
 
 /* ============ VIDEO SHOWCASE ============ */
 .video-section { background: var(--panel); border-block: 1px solid var(--cyan-dim); }
-.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+@media (max-width: 960px) and (min-width: 761px) { .video-grid { grid-template-columns: 1fr 1fr; } }
 .video-frame { position: relative; border: 1px solid rgba(0, 207, 255, 0.25); background: #000; }
 .video-frame::before {
   content: ""; position: absolute; top: -1px; left: -1px; width: 34px; height: 34px; z-index: 2;
