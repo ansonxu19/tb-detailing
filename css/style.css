@@ -341,10 +341,33 @@ h1, h2, h3 {
 @media (max-width: 760px) {
   .nav { position: fixed; inset: 0; background: rgba(5, 9, 11, 0.98); flex-direction: column; justify-content: center; gap: 1.8rem; transform: translateX(100%); transition: transform 0.35s; }
   .nav.open { transform: none; }
-  .nav a { font-size: 1rem; }
+  .nav a { font-size: 1rem; padding: 0.6rem 1rem; }
   .nav-toggle { display: block; position: relative; z-index: 10; }
   .header-inner .btn { display: none; }
   .call-fab { display: inline-flex; }
   .services-grid, .gallery, .form-grid, .video-grid { grid-template-columns: 1fr; }
   .brand img { width: 44px; height: 44px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; text-align: center; }
+  .hero-ctas .btn { width: 100%; }
+  .hero-phone { text-align: center; }
+  .hero-inner { padding-bottom: clamp(2.2rem, 7vh, 4rem); }
+  .g-item figcaption { opacity: 1; transform: none; }
+  .service-card { padding: 1.8rem 1.5rem; }
+  .marquee { animation-duration: 32s; }
+}
+@media (max-width: 480px) {
+  .brand-name { font-size: 0.92rem; letter-spacing: 0.08em; }
+  .brand-name small { letter-spacing: 0.28em; }
+  .trust-item { padding: 1.1rem 0.6rem; }
+  .trust-item strong { font-size: 0.98rem; }
+  .trust-item span { font-size: 0.58rem; letter-spacing: 0.2em; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .footer-legal { flex-direction: column; gap: 0.4rem; text-align: center; }
+  .review-card { padding: 1.4rem 1.3rem; }
+  .filters { gap: 0.45rem; }
+  .filters button { padding: 0.55rem 1rem; font-size: 0.66rem; letter-spacing: 0.16em; }
+  .package-card { padding: 1.6rem 1.4rem; }
+  .cta-band h2 { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .cta-band .btn { width: 100%; }
+  .lightbox .close { top: 0.6rem; right: 0.9rem; padding: 0.5rem; }
 }
